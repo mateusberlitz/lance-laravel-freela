@@ -7,6 +7,9 @@ Segue o exemplo de como deve ficar o acesso as rotas:
 <img src="https://cdn.discordapp.com/attachments/415479229858185218/953632901554143232/unknown.png" width="400">
 <img src="https://cdn.discordapp.com/attachments/415479229858185218/953633406737076255/unknown.png" width="400">
 
+Esquema de relacionamentos:
+https://whimsical.com/estrutura-do-sistema-TZiVrm6R4vkUbCj3NBmRoK
+
 ## Entidades
  - [Customers]: Nome completo, email, telefone, cpf, cnpj, data de nascimento, estado civil, país, cidade, cep, endereço, número;
  - [Contracts]: Número, cliente;
