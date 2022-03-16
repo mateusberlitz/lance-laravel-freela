@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('teams', [TeamsController::class, 'index']);
+Route::get('teams/{team}', [TeamsController::class, 'show']);
+Route::post('teams/store', [TeamsController::class, 'store']);
+Route::post('teams/update/{team}', [TeamsController::class, 'update']);
+Route::delete('teams/destroy/{team}', [TeamsController::class, 'destroy']);
