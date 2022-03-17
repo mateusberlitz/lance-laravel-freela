@@ -77,7 +77,7 @@ class TeamsController extends Controller
     {
         $team = teams::with('branch')->with('company')->with('desk')->with('manager')->where('id', $id);
 
-        return response()->json($team ? $team : ['error' => 'Nenhuma equipe encontrada.']);
+        return response()->json($team ? $team : ['error' => 'Nenhuma filial encontrada.']);
     }
 
     /**
