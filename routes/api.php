@@ -1,6 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\CustomersController;
+use App\Http\Controllers\Api\ContractsController;
+use App\Http\Controllers\Api\TeamsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +21,6 @@ Route::get('teams/{team}', [TeamsController::class, 'show']);
 Route::post('teams/store', [TeamsController::class, 'store']);
 Route::post('teams/update/{team}', [TeamsController::class, 'update']);
 Route::delete('teams/destroy/{team}', [TeamsController::class, 'destroy']);
+
+Route::resource('customers', CustomersController::class)->except(['create', 'edit']);
+Route::resource('contracts', ContractsController::class)->except(['create', 'edit']);
