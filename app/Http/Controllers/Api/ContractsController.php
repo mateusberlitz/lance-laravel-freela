@@ -7,10 +7,19 @@ use App\Http\Requests\ContractRequest;
 use App\Http\Resources\ContractResource;
 use App\Models\Contracts;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\Request;
 
 class ContractsController extends Controller {
 
     public function index(): JsonResource {
+        $contracts = Contracts::query();
+
+        if (Request::has('number_contract'))
+            $contracts->where('number_contract', Request::get('number_contract'));
+
+        if (Request::has('customer_id'))
+            $contracts->where('customer_id', Request::get('customer_id'));
+
         return ContractResource::collection(Contracts::paginate());
     }
 
