@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\ContractsController;
 use App\Http\Controllers\Api\CommissionParcelsController;
+use App\Http\Controllers\Api\CommissionsController;
 use App\Http\Controllers\Api\CompanyCommissionsController;
 use App\Http\Controllers\Api\CustomersController;
 use App\Http\Controllers\Api\QuotasController;
@@ -30,3 +31,4 @@ Route::resource('contracts', ContractsController::class)->except(['create', 'edi
 Route::resource('quotas', QuotasController::class)->except(['create', 'edit']);
 Route::resource('commission-parcels', CommissionParcelsController::class)->except(['create', 'edit']);
 Route::resource('company-commissions', CompanyCommissionsController::class)->except(['create', 'edit']);
+Route::resource('commissions', CommissionsController::class)->except(['create', 'edit']);
